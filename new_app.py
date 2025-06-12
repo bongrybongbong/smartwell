@@ -40,7 +40,6 @@ st.title("Smartwell")
 
 with st.sidebar:
     st.image("logo.png", width=200)
-    st.sidebar.title("⚙️ 리포트 메뉴")
 
     # 버튼 클릭 시 서버에서 데이터 가져오기
     if st.button("📥 리포트 가져오기"):
