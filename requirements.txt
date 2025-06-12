@@ -4,5 +4,6 @@ langchain-google-genai
 langchain_community
 pypdf
 streamlit
-
-# 
+python-docx
+fastapi
+plotly

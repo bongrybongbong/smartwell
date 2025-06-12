@@ -1,0 +1,12 @@
+{
+    "name": "김봉남",
+    "height": 175,
+    "weight": 70,
+    "bmi": "과체중",
+    "blood_pressure": "128/83",
+    "heart_rate": 75,
+    "daily_steps": 7000,
+    "sleep_duration": 7,
+    "health_score": 90,
+    "report_generated_at": "2024-06-12 23:00"
+}
