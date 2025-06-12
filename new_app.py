@@ -36,21 +36,10 @@ def parse_report_sections(report_text):
 user_profile = None
 
 # 상단 타이틀
-st.title("스마트팩토리캡스톤디자인 · 7팀 진태현 외")
-
-# 학교 로고 + 설명만 기본 표시
-
-st.markdown(
-    """
-    ### 📚 프로젝트 소개
-    본 서비스는 개인 건강 데이터를 분석하여 **맞춤형 건강 리포트**를 제공하는 솔루션입니다.
-    사용자의 웨어러블 기기 데이터를 기반으로 AI가 건강 상태를 평가하고,
-    **개인화된 건강 관리 방안**을 제시합니다.
-    """
-)
+st.title("Smartwell")
 
 with st.sidebar:
-    st.image("logo.jpg", width=300)
+    st.image("logo.png", width=300)
     st.sidebar.title("⚙️ 리포트 메뉴")
 
     # 버튼 클릭 시 서버에서 데이터 가져오기
