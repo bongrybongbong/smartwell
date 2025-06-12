@@ -39,7 +39,7 @@ user_profile = None
 st.title("Smartwell")
 
 with st.sidebar:
-    st.image("logo.png", width=300)
+    st.image("logo.png", width=150)
     st.sidebar.title("⚙️ 리포트 메뉴")
 
     # 버튼 클릭 시 서버에서 데이터 가져오기
