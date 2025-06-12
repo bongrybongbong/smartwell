@@ -183,3 +183,13 @@ if "user_profile" in st.session_state:
             unsafe_allow_html=True
         )
         st.markdown(section_content)
+
+    # 📄 리포트 다운로드 버튼
+    st.markdown("---")
+    st.markdown("### 📄 리포트 다운로드")
+    st.download_button(
+        label="📥 리포트 TXT 다운로드",
+        data=report.encode('utf-8'),
+        file_name=f"{user_profile['name']}_health_report.txt",
+        mime="text/plain"
+    )
