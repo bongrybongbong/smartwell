@@ -86,7 +86,7 @@ The system follows predefined logical blocks and conditional branching (if-then 
 - Conclude with an emotionally supportive statement to motivate the user
 
 Document content: {context}
-Student question: {question}
+question: {question}
 """
     )
 
