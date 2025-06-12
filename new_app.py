@@ -79,24 +79,47 @@ if "user_profile" in st.session_state:
     # 프로필 표시
     st.sidebar.markdown("### 🧑‍⚕️ 사용자 프로필")
     st.sidebar.markdown(
-        f"""
-        <div style='padding: 15px; background-color: #FFFFFF; border-radius: 12px; border: 2px solid #4CAF50;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 15px; line-height: 1.8;'>
-        <table style='width: 100%; border-collapse: collapse;'>
-            <tr><td style='font-weight: bold; color: #333;'>이름</td><td>{user_profile['name']}</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>키</td><td>{user_profile['height']} cm</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>몸무게</td><td>{user_profile['weight']} kg</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>BMI</td><td>{user_profile['bmi']}</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>혈압</td><td>{user_profile['blood_pressure']}</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>평균 심박수</td><td>{user_profile['heart_rate']} 회/분</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>하루 평균 걸음 수</td><td>{user_profile['daily_steps']} 보</td></tr>
-            <tr><td style='font-weight: bold; color: #333;'>수면 시간</td><td>{user_profile['sleep_duration']} 시간</td></tr>
-        </table>
-        </div>
-        """,
+    f"""
+    <div style='padding: 15px; background-color: #FFFFFF; border-radius: 12px; border: 2px solid #4CAF50;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-size: 15px; line-height: 1.8;'>
+    <table style='width: 100%; border-collapse: collapse;'>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>이름</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['name']}</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>키</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['height']} cm</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>몸무게</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['weight']} kg</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>BMI</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['bmi']}</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>혈압</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['blood_pressure']}</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>평균 심박수</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['heart_rate']} 회/분</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>하루 평균 걸음 수</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['daily_steps']} 보</td>
+        </tr>
+        <tr>
+            <td style='font-weight: bold; color: #333; padding: 8px;'>수면 시간</td>
+            <td style='padding: 8px; word-break: break-word; white-space: normal; overflow: visible;'>{user_profile['sleep_duration']} 시간</td>
+        </tr>
+    </table>
+    </div>
+    """,
         unsafe_allow_html=True
     )
-
     # 건강 점수 표시
     score = user_profile['health_score']
     if score >= 70:
