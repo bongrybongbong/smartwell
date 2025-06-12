@@ -65,6 +65,7 @@ The system follows predefined logical blocks and conditional branching (if-then 
 ### 1️⃣ Overview
 - Include Name, Height, Weight, BMI, Blood Pressure, Health Score
 - Explain the purpose and scope of the analysis
+- Do not include BMI calculation logic.
 
 ### 2️⃣ Current Health Status Analysis
 - Evaluate major metrics such as heart rate, step count, blood pressure
