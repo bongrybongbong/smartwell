@@ -42,7 +42,20 @@ st.markdown("""
 
 # 사이드바 구성
 with st.sidebar:
-    st.image("logo.png", width=200)
+    # 로고 중앙 정렬용 CSS 삽입
+    st.markdown("""
+        <style>
+        [data-testid="stSidebar"] {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    
+    # 로고 삽입
+    st.sidebar.image("smartwell_logo.png", width=200)
 
     # 버튼 스타일
     st.markdown("""
