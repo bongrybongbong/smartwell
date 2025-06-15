@@ -43,17 +43,19 @@ st.markdown("""
 # 사이드바 구성
 with st.sidebar:
     # 로고 중앙 정렬용 CSS 삽입
+    # ✅ 로고만 상단 고정하는 스타일
     st.markdown("""
-    <style>
-    /* 사이드바 전체를 flex로 정렬 */
-    [data-testid="stSidebar"] > div:first-child {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;   /* 세로 중앙 */
-        align-items: center;       /* 가로 중앙 */
-        height: 100vh;             /* 전체 높이 기준 */
-    }
-    </style>
+        <style>
+        /* 로고 위치 고정 + 가운데 정렬 */
+        [data-testid="stSidebar"] img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+        </style>
     """, unsafe_allow_html=True)
     # 로고 삽입
     st.sidebar.image("logo.png", width=200)
