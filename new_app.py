@@ -45,21 +45,25 @@ with st.sidebar:
     # 로고 중앙 정렬용 CSS 삽입
     # ✅ 로고만 상단 고정하는 스타일
     st.markdown("""
-    <style>
-    /* 사이드바 콘텐츠를 세로 정렬 가능하게 만들고 높이 제한 */
-    [data-testid="stSidebar"] > div:first-child {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    /* 로고 이미지 스타일 */
-    [data-testid="stSidebar"] img {
-        max-width: 80%;
-    }
-    </style>
+        <style>
+        /* 사이드바 전체 너비 조절 (기본보다 넓게) */
+        [data-testid="stSidebar"] {
+            min-width: 260px;
+            max-width: 260px;
+        }
+    
+        /* 테이블이나 div에 여백 너무 클 경우 줄이기 */
+        [data-testid="stSidebar"] .element-container {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    
+        /* 테이블 셀 안 여백 조정 */
+        table td {
+            padding-left: 6px !important;
+            padding-right: 6px !important;
+        }
+        </style>
     """, unsafe_allow_html=True)
     
     st.sidebar.image("logo.png", width=200)
