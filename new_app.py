@@ -44,16 +44,17 @@ st.markdown("""
 with st.sidebar:
     # 로고 중앙 정렬용 CSS 삽입
     st.markdown("""
-        <style>
-        [data-testid="stSidebar"] {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        </style>
+    <style>
+    /* 사이드바 전체를 flex로 정렬 */
+    [data-testid="stSidebar"] > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;   /* 세로 중앙 */
+        align-items: center;       /* 가로 중앙 */
+        height: 100vh;             /* 전체 높이 기준 */
+    }
+    </style>
     """, unsafe_allow_html=True)
-    
     # 로고 삽입
     st.sidebar.image("logo.png", width=200)
 
