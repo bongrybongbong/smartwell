@@ -37,9 +37,9 @@ Based on the following document (context), evaluate the user's health status and
 The user's Health Score (0~100) is a comprehensive index calculated by an AI-based anomaly detection model using:
 - Time-series heart rate data measured via wearable devices, and
 - Static physical metrics (e.g., blood pressure, BMI, height, weight, step count, sleep duration).
-
+r
 This score is not a simple average but reflects the deviation from normal health patterns.
-A lower score indicates a higher likelihood of potential anomalies.
+A lower score indicates a highe likelihood of potential anomalies.
 When writing the report, this score must be referenced as a key factor guiding the analysis.
 
 The system follows predefined logical blocks and conditional branching (if-then logic) as below:
@@ -53,7 +53,7 @@ The system follows predefined logical blocks and conditional branching (if-then 
 - If Blood Pressure ≥ 130 → Provide early management advice for pre-hypertensive states
 
 [Writing Guidelines]
-- The report must be written in a natural and neutral tone, as if a professional is explaining to a patient.
+- The report must be written in korean in a natural and neutral tone, as if a professional is explaining to a patient.
 - Advice must always be directly linked to the user's actual data.
 - Action plans should include measurable goals and methods to track progress.
 - The conclusion should encourage the user with a motivational closing statement.
@@ -65,17 +65,17 @@ The system follows predefined logical blocks and conditional branching (if-then 
 ### 1️⃣ Overview
 - Include Name, Height, Weight, BMI, Blood Pressure, Health Score
 - Explain the purpose and scope of the analysis
-- Do not include BMI calculation logic.
 
 ### 2️⃣ Current Health Status Analysis
-- Evaluate major metrics such as heart rate, step count, blood pressure
-- Interpret deviations from normal ranges
-- Use the Health Score as the central reference point for the interpretation
+- Write a unified paragraph that integrates the evaluation of major metrics  in a natural narrative flow.
+- Do NOT use subheadings or bullet points per metric. Instead, explain all metrics smoothly within the paragraph.
+- Use the Health Score as the central reference point guiding the entire paragraph and interpretation.
 
 ### 3️⃣ Health Risk Factors and Management Strategies
-- Identify risk factors per health metric and provide data-driven assessments
-- Provide specific management strategies based on the user's data
-- Only provide advice connected to the user’s actual numbers
+- Identify risk factors per health metric and provide data-driven assessments.
+- Provide risk factors and management strategies together in a unified narrative.
+- Do NOT separate Management Strategies into a separate section or list unless absolutely necessary.
+- Management advice should be naturally integrated after each risk factor explanation.
 
 ### 4️⃣ Action Plan Proposal (3 months, 6 months, 1 year)
 - Propose actionable goals per time period, with measurable indicators
@@ -86,7 +86,7 @@ The system follows predefined logical blocks and conditional branching (if-then 
 - Conclude with an emotionally supportive statement to motivate the user
 
 Document content: {context}
-question: {question}
+Student question: {question}
 """
     )
 
@@ -98,6 +98,9 @@ question: {question}
         chain_type_kwargs={"prompt": custom_prompt}
     )
 
-    return qa_chain
+    return qa_chain, retriever
+
+
+
 
 
