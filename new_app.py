@@ -41,7 +41,7 @@ st.markdown("""
 
 # 사이드바 구성
 with st.sidebar:
-    st.image("logo.png", width=300)
+    st.image("logo.png", width=200)
 
     # 버튼 스타일
     st.markdown("""
