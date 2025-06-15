@@ -55,7 +55,7 @@ with st.sidebar:
     """, unsafe_allow_html=True)
     
     # 로고 삽입
-    st.sidebar.image("smartwell_logo.png", width=200)
+    st.sidebar.image("logo.png", width=200)
 
     # 버튼 스타일
     st.markdown("""
