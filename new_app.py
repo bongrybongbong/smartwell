@@ -9,6 +9,7 @@ st.set_page_config(layout="centered")
 
 # FastAPI 서버 endpoint
 url = "https://6ffe-203-252-33-6.ngrok-free.app/get_latest_result"
+url = "https://6ffe-203-252-33-6.ngrok-free.app/get_latest_result"
 
 
 sample_user_profile = {
